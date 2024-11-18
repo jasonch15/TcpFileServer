@@ -20,10 +20,11 @@ public slots:
 private:
     QProgressBar     *serverProgressBar;
     QLabel           *serverStatusLabel;
+    QLineEdit        *ipInput;          // 用于输入 IP 地址
+    QLineEdit        *portInput;        // 用于输入端口
     QPushButton      *startButton;
     QPushButton      *quitButton;
     QDialogButtonBox *buttonBox;
-
     QTcpServer       tcpServer;
     QTcpSocket       *tcpServerConnection;
     qint64           totalBytes;
@@ -32,6 +33,7 @@ private:
     QString          fileName;
     QFile            *localFile;
     QByteArray       inBlock;
+
 };
 
 #endif // TCPFILESERVER_H
